@@ -3,29 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Arrow Function Demo</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to top right, #fbc2eb, #a6c1ee);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        color: #333;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: #4b0082;
+      }
+
+      .result-box {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px 40px;
+        margin: 10px 0;
+        width: 300px;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    </style>
   </head>
   <body>
     <h2>JavaScript Arrow Function</h2>
-    <p id="result"></p>
-    <p id="result2"></p>
-    <p id="result3"></p>
+
+    <div class="result-box" id="result"></div>
+    <div class="result-box" id="result2"></div>
+    <div class="result-box" id="result3"></div>
+    <div class="result-box" id="result4"></div>
 
     <script>
       function add(a, b) {
         return a + b;
       }
-      document.getElementById("result").innerHTML = add(4, 6);
-
-      //Arrow Function
+      document.getElementById("result").innerHTML = `Addition: ${add(4, 6)}`;
 
       var sub = (a, b) => a - b;
-      document.getElementById("result2").innerHTML = sub(40, 15);
+      document.getElementById("result2").innerHTML = `Subtraction: ${sub(
+        40,
+        15
+      )}`;
 
       var mult = function (a, b) {
         return a * b;
       };
-      document.getElementById("result3").innerHTML = mult(40, 15);
+      document.getElementById("result3").innerHTML = `Multiplication: ${mult(
+        40,
+        15
+      )}`;
+
+      var div = (a, b) => a / b;
+      document.getElementById("result4").innerHTML = `Division: ${div(
+        150,
+        15
+      )}`;
     </script>
   </body>
 </html>
